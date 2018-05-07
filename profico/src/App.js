@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Homepage from "./Pages/Homepage";
 import Questionnaire from "./Pages/Questionnaire";
 import Test from './Pages/test';
 
-// We'll create this in step 3.
-import store from './store.js';
 
 
 import {

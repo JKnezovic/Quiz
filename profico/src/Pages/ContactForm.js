@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 
+const validate = values => {
+  const errors = {};
+  const questions = ["fav_mov", "fav_jedi", "fav_sith", "fav_planet","force_select"];
+
+  questions.forEach(question => {
+    if (!values[question]) {
+      errors[question]="flag";
+    }
+  });
+
+  return errors;
+};
+
+
 class ContactForm extends Component {
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, submitting, invalid } = this.props;
     return (
       <form onSubmit={handleSubmit}>
       <div>
@@ -52,7 +66,7 @@ class ContactForm extends Component {
          <label><Field name="force_select" component="input" type="radio" value="1"/> Darth Vader</label><br/>
         </div>
       </div>
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={submitting || invalid} >Submit</button>
       </form>
     );
   }
@@ -60,7 +74,8 @@ class ContactForm extends Component {
 
 // Decorate the form component
 ContactForm = reduxForm({
-  form: 'contact' // a unique name for this form
+  form: 'contact', // a unique name for this form
+validate
 })(ContactForm);
 
 export default ContactForm;
