@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Homepage from "./Pages/Homepage";
 import Questionnaire from "./Pages/Questionnaire";
 import Test from './Pages/test';
+import './styles/App.css';
 
 
 

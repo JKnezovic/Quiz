@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import '../styles/App.css'
+import '../styles/homestyle.css'
 
 class Homepage extends Component {
 
   render() {
     return (
       <div className="Homepage">
-      <Link to="/Questionnaire"> <button>Start</button></Link>
-      <Link to="/Test"> <button>StartTest</button></Link>
+      <h1>May the force<br /> be with you</h1>
+      <Link to="/Test"> <button>START</button></Link>
       </div>
     );
   }
