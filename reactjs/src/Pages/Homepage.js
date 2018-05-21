@@ -9,7 +9,7 @@ class Homepage extends Component {
     return (
       <div className="Homepage">
       <h1>May the force<br /> be with you</h1>
-      <Link to="/Test"> <button>START</button></Link>
+      <Link to="/Questionnaire"> <button>START</button></Link>
       </div>
     );
   }

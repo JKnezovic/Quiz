@@ -1,6 +1,6 @@
 import {applyMiddleware,createStore} from 'redux'
 
-import reducer from './reducers/combo.js'
+import reducer from './reducers/combineReducers.js'
 
 import {createLogger} from "redux-logger"
 import thunk from "redux-thunk"

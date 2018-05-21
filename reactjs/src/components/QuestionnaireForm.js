@@ -17,7 +17,7 @@ const validate = values => {
 };
 
 
-class ContactForm extends Component {
+class QuestionnaireForm extends Component {
   render() {
     const { handleSubmit, submitting, invalid } = this.props;
     return (
@@ -111,10 +111,10 @@ class ContactForm extends Component {
   }
 }
 
-// Decorate the form component
-ContactForm = reduxForm({
-  form: 'contact', // a unique name for this form
-validate
-})(ContactForm);
 
-export default ContactForm;
+QuestionnaireForm = reduxForm({
+  form: 'contact',
+validate
+})(QuestionnaireForm);
+
+export default QuestionnaireForm;
