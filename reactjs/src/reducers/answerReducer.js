@@ -1,4 +1,4 @@
-export default function answer(state={
+const intialState = {
   answer:{
     title:"",
     message:"",
@@ -6,7 +6,8 @@ export default function answer(state={
   fetching:false,
   fetched:false,
   error:null,
-}, action){
+}
+export default function answer(state=intialState, action){
 
     switch (action.type) {
       case "FETCH_ANSWER":{
@@ -20,6 +21,14 @@ export default function answer(state={
           ...state,
           fetching:true,
           fetched:true,
+          answer:action.payload,
+        }
+      }
+      case "RESET_STORE":{
+        return {
+          ...state,
+          fetching:false,
+          fetched:false,
           answer:action.payload,
         }
       }

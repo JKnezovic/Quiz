@@ -12,3 +12,9 @@ export function fetchResult(values){
   })
   }
 }
+
+export function resetResult(){
+  return function (dispatch){
+    dispatch({type:"RESET_STORE",payload:{title: "", message: ""}})
+  }
+}
